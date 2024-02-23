@@ -22,7 +22,7 @@ Las soluciones de conectores disponibles en este repositorio están diseñadas p
 ## Cómo Usar
 
 Con estos simples pasos podrás utilizar los conectores de este repositorio, sin ser un gran experto en datos ni saber programar. 
-1. Date de alta en TrawlingWeb.
+1. Date de alta en ([www.trawlingweb.com](https://dashboard.trawlingweb.com/register)).
 2. Elige de este repositorio la función que más te interesa.
 3. Ejecútala.
 
