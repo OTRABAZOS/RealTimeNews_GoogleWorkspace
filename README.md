@@ -32,8 +32,6 @@ Con estos simples pasos podrás utilizar los conectores de este repositorio, sin
 - Saber utilizar Google Drive.
 - Tener una cuenta de TrawlingWeb Gratuita ([www.trawlingweb.com](https://dashboard.trawlingweb.com/register))
 
-## ¿Qué son los ETL?
+## Sobre TrawlingWeb
 
-ETL son las siglas de *Extract, Transform, Load* (Extracción, Transformación y Carga), que describen el proceso de tomar datos de una o más fuentes, transformarlos para que cumplan con ciertos criterios o formatos, y luego cargarlos en un sistema de destino para su análisis o almacenamiento. 
-
-Las soluciones de conectores disponibles en este repositorio están diseñadas para realizar precisamente estas tareas. Permiten conectar con diversas fuentes de datos y entregarte los resultados de tus clientes en herramientas sencillas y listas para su consumo. Este proceso simplifica enormemente la gestión de datos, permitiéndote acceder a información valiosa de manera rápida y eficiente, sin necesidad de conocimientos avanzados en manipulación de datos.
+TrawlingWeb es una empresa especializada en captura de datos y contenidos que te ofrece acceso a contenidos capturados en tiempo real, incluyendo noticias de 18 millones de fuentes de información y conversaciones publicadas en redes sociales. Todo esto está al alcance de tu empresa o agencia de marketing y comunicación. En TrawlingWeb, facilitamos que puedas consumir los contenidos capturados de manera sencilla, práctica y económica, proporcionando las herramientas necesarias para que la información relevante siempre esté a tu disposición, optimizando tus estrategias de análisis y toma de decisiones.
