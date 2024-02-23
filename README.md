@@ -1,5 +1,5 @@
-# DataForMarketing
-# ETLs para Marketing & Comunicación
+# Monitoreo de Medios Básico
+# Trawlingweb ETLs para Marketing & Comunicación
 
 En este repositorio encontrarás soluciones diseñadas específicamente para agencias de marketing y comunicación que buscan obtener y procesar datos de noticias o redes sociales de manera eficaz, sin necesitar ser grandes expertos en Datos. Tan solo debes tener una cuenta de Google y saber manejar un Excel para empezar.
 
