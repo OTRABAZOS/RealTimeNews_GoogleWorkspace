@@ -16,9 +16,9 @@ Follow these steps to use the connectors in this repository:
 2. Access Google Apps Script and prepare to copy and paste the provided code.
 3. In Google Drive, create a folder with the name of your choice that can easily identify with your client or topic of interest.
 4. Inside this folder, create another one called `RAW`.
-5. Select the `TRW_NewsMedia2CSV` script available in this repository. Inside, you will find useful comments (starting with `//`) to obtain the necessary Token key and how to use specific search terms.
+5. Select the [`TRW_NewsMedia2CSV`](https://github.com/OTRABAZOS/RealTimeNews_GoogleWorkspace/blob/main/English/TRW_NewsMedia2CSV) script available in this repository. Inside, you will find useful comments (starting with `//`) to obtain the necessary Token key and how to use specific search terms.
 6. Create a new project in Google Apps Script, name it as you wish, copy the script code, save it, and run it. This will store the news in your Google Drive folder in CSV format.
-7. Without closing the created project, open a new project in Google Apps Script for the `TRW_CSV2SpreadSheet` script, copy it, paste it, save it, and run it. This will convert the CSVs into spreadsheets to facilitate their management.
+7. Without closing the created project, open a new project in Google Apps Script for the [`TRW_CSV2SpreadSheet`](https://github.com/OTRABAZOS/RealTimeNews_GoogleWorkspace/blob/main/English/TRW_CSV2SparedSheet) script, copy it, paste it, save it, and run it. This will convert the CSVs into spreadsheets to facilitate their management.
 
 ### Notes
 - At the end, you will have two projects in Apps Script: one that stores the news in CSV and another that updates them in a spreadsheet, all within the created folder in Google Drive.
