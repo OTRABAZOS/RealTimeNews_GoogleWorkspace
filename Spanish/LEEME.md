@@ -20,9 +20,9 @@ Sigue estos pasos para utilizar los conectores de este repositorio:
 2. Accede a [Apps Script de Google](https://www.google.com/script/start/) y prepárate para copiar y pegar el código proporcionado.
 3. En Google Drive, crea una carpeta con el nombre de tu preferencia que identifique fácilmente con tu cliente o tema de interés.
 4. Dentro de esta carpeta, crea otra llamada `RAW`.
-5. Selecciona el script [`TRW_NewsMedia2CSV`](https://github.com/OTRABAZOS/MonitoreoMedios-para-Google-WorkSpace/blob/main/TRW_NewsMedia2CSV) disponible en este repositorio. Dentro encontrarás comentarios útiles (iniciados con `//`) para obtener la clave Token necesaria y cómo usar términos de búsqueda específicos.
+5. Selecciona el script [`TRW_Noticias_CSV`](https://github.com/OTRABAZOS/RealTimeNews_GoogleWorkspace/blob/main/Spanish/TRW_Noticias_CSV) disponible en este repositorio. Dentro encontrarás comentarios útiles (iniciados con `//`) para obtener la clave Token necesaria y cómo usar términos de búsqueda específicos.
 6. Crea un nuevo proyecto en Apps Script de Google, nómbralo a tu gusto, copia el código del script, guárdalo y ejecútalo. Esto almacenará las noticias en tu carpeta de Google Drive en formato CSV.
-7. Sin cerrar el proyecto creado, abre un nuevo proyecto en Apps Script de Google para el script [`TRW_CSV_HojaCalculo`](https://github.com/OTRABAZOS/MonitoreoMedios-para-Google-WorkSpace/blob/main/Spanish/TRW_CSV_HojaCalculo), cópialo, pégalo, guárdalo y ejecútalo. Esto convertirá los CSV en hojas de cálculo para facilitar su gestión.
+7. Sin cerrar el proyecto creado, abre un nuevo proyecto en Apps Script de Google para el script [`TRW_CSV_HojaCalculo`](https://github.com/OTRABAZOS/RealTimeNews_GoogleWorkspace/blob/main/Spanish/TRW_CSV_HojaCalculo), cópialo, pégalo, guárdalo y ejecútalo. Esto convertirá los CSV en hojas de cálculo para facilitar su gestión.
 
 ### Notas
 
