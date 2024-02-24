@@ -1,4 +1,4 @@
-# Obetbner Noticias de Interés y Almacenarlas en Google Drive
+# Obtener Noticias de Interés y Almacenarlas en Google Drive
 
 Este repositorio está diseñado para expertos en marketing y comunicación que necesitan gestionar noticias sobre sus clientes de manera eficaz, sin requerir amplios conocimientos en gestión de datos. Solo necesitas tener una cuenta de Google y conocimientos básicos de Excel para comenzar.
 
