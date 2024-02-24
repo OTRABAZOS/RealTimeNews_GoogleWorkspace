@@ -1,15 +1,16 @@
 // Actualzia o crea un archivo Hoja de calculo para actualizar los datos provinientes del API News de Trawlingweb
 function actualizarHojaDesdeCSV() {
-  const idCarpeta = 'TU_ID_CARPETA_AQUI'; // ID de la carpeta donde se buscarán los CSVs y se guardará el Spreadsheet
+  const idCarpeta = 'TU_ID_CARPETA_AQUI'; // ID de la carpeta donde se buscarán los CSVs y se guardará la hoja de cálculo
   const idCarpetaRaw = 'TU_ID_CARPETA_RAW'; // ID de la carpeta RAW para mover los CSVs procesados
   const nombreHoja = 'AGENCIA_MARCA'; // Nombre deseado para el Spreadsheet. ej: MiAgencia_Cocacola
   
   const carpeta = DriveApp.getFolderById(idCarpeta);
-  let hoja = buscarOcrearHoja(carpeta, nombreHoja);
+  let hoja = buscarOcrearHoja(carpeta, nombreHoja); // Ajuste para manejar la creación de hojas sin la necesidad de parámetro adicional
   const hojaActiva = hoja.getSheets()[0];
-  const idsExistentes = obtenerIdsExistentes(hojaActiva, "id");
+  let idsExistentes = obtenerIdsExistentes(hojaActiva);
 
   const archivosCSV = carpeta.getFilesByType(MimeType.CSV);
+  let primeraIteracion = true;
 
   while (archivosCSV.hasNext()) {
     const archivoCSV = archivosCSV.next();
@@ -17,11 +18,15 @@ function actualizarHojaDesdeCSV() {
     const datosCSV = Utilities.parseCsv(contenidoCSV);
 
     // Verifica si el archivo CSV tiene contenido
-    if (datosCSV.length === 0 || !datosCSV[0]) {
+    if (datosCSV.length <= 1 || !datosCSV[0]) {
       Logger.log("El archivo " + archivoCSV.getName() + " está vacío o no se pudo leer correctamente.");
-      // Mueve el archivo CSV procesado a la carpeta RAW incluso si está vacío o no se puede leer
       archivoCSV.moveTo(DriveApp.getFolderById(idCarpetaRaw));
       continue; // Salta al siguiente archivo CSV
+    }
+
+    if (primeraIteracion && idsExistentes.size === 0) {
+      hojaActiva.appendRow(datosCSV[0]); // Asume que la primera fila del CSV son las cabeceras
+      primeraIteracion = false; // Asegura que solo se añaden cabeceras una vez
     }
 
     const indiceId = datosCSV[0].indexOf("id");
@@ -30,12 +35,10 @@ function actualizarHojaDesdeCSV() {
 
     if (indiceId === -1) {
       Logger.log("No se encontró la columna 'id' en " + archivoCSV.getName() + ". Asegúrate de que el CSV está formateado correctamente.");
-      // Mueve el archivo CSV procesado a la carpeta RAW incluso si no tiene la columna 'id'
       archivoCSV.moveTo(DriveApp.getFolderById(idCarpetaRaw));
       continue;
     }
 
-    // Procesamiento de las filas del CSV
     for (let i = 1; i < datosCSV.length; i++) {
       const fila = datosCSV[i];
       const idNoticia = fila[indiceId];
@@ -50,7 +53,6 @@ function actualizarHojaDesdeCSV() {
 
     Logger.log(`Archivo ${archivoCSV.getName()}: Noticias nuevas insertadas: ${noticiasInsertadas}. Duplicados encontrados: ${duplicadosEncontrados}.`);
 
-    // Mueve el archivo CSV procesado a la carpeta RAW después de procesarlo
     archivoCSV.moveTo(DriveApp.getFolderById(idCarpetaRaw));
   }
 }
@@ -63,20 +65,22 @@ function buscarOcrearHoja(carpeta, nombreHoja) {
       return SpreadsheetApp.openById(spreadsheet.getId());
     }
   }
-  const hoja = SpreadsheetApp.create(nombreHoja);
+    const hoja = SpreadsheetApp.create(nombreHoja);
   const archivoNuevo = DriveApp.getFileById(hoja.getId());
   archivoNuevo.moveTo(carpeta);
   return hoja;
 }
 
-function obtenerIdsExistentes(hojaActiva, nombreColumnaId) {
+function obtenerIdsExistentes(hojaActiva) {
   const rango = hojaActiva.getDataRange();
   const valores = rango.getValues();
-  const indiceId = valores[0].indexOf(nombreColumnaId);
+  const indiceId = valores[0].indexOf("id");
   const idsExistentes = new Set();
 
   if (indiceId !== -1) {
-    valores.slice(1).forEach(fila => idsExistentes.add(fila[indiceId]));
+    for (let i = 1; i < valores.length; i++) {
+      idsExistentes.add(valores[i][indiceId]);
+    }
   }
 
   return idsExistentes;
