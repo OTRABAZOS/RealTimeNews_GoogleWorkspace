@@ -1,4 +1,4 @@
-# English: TrawlingWeb News Integration into Google Workspace
+# English: Connecting TrawlingWeb with Google Workspace to Access News from 18 Million Sources in Real Time
 
 ## Repository Purpose
 
@@ -30,7 +30,7 @@ This project is distributed under the MIT License, allowing free use and modific
 
 ---
 
-# Spanish: Integración de Noticias de TrawlingWeb en Google Workspace
+# Spanish: Conectando TrawlingWeb con Google Workspace para Obtener Noticias de 18 Millones de Fuentes en Tiempo Real
 
 ## Propósito del Repositorio
 
