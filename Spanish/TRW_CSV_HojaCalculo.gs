@@ -1,6 +1,6 @@
 // Actualzia o crea un archivo Hoja de calculo para actualizar los datos provinientes del API News de Trawlingweb
 function actualizarHojaDesdeCSV() {
-  const idCarpeta = 'TU_ID_CARPETA_AQUI'; // ID de la carpeta donde se buscarán los CSVs y se guardará la hoja de cálculo
+  const idCarpeta = 'TU_ID_CARPETA_AQUI'; // ID carpeta Google Drive donde se buscarán los CSVs y se guardará la hoja de cálculo
   const idCarpetaRaw = 'TU_ID_CARPETA_RAW'; // ID de la carpeta RAW para mover los CSVs procesados
   const nombreHoja = 'AGENCIA_MARCA'; // Nombre deseado para el Spreadsheet. ej: MiAgencia_Cocacola
   
