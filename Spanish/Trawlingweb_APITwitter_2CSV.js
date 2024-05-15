@@ -5,6 +5,7 @@
  */
 /** Instrucciones:
  * Este GS esta pensado para su ejecución en Google Apps Script y trabajar con carpetas de google Drive
+  * No mezclar con colecciones de otars redes sociales distintas a Twitter
  * debes configurar las variables: var tsInicio = ahora.getTime() - (60*24);  // var urlBase = (i & token) // var idCarpeta =
  */
 function llamarAPIYProcesarDatos() {
