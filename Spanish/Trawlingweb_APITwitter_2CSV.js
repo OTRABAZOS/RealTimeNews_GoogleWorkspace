@@ -51,7 +51,7 @@ function llamarAPIYProcesarDatos() {
 
   var fechaHoy = formatDate(new Date());
   var nombreArchivo = "tweets_miempresa_" + fechaHoy + ".csv"; // Sustitiye miempresa por le nombre que quieras
-  var idCarpeta = '1HmPdnM4fIvqkWUff3TUb31KIa0XxcBmc'; // Sustituye 'ccccccccccccccccc' por la ID de la carpeta donde se buscarán los CSVs y se guardará la hoja de calculo
+  var idCarpeta = 'ccccccccccccccccc'; // Sustituye 'ccccccccccccccccc' por la ID de la carpeta donde se buscarán los CSVs y se guardará la hoja de calculo
   guardarCsvEnDrive(csvTotal, nombreArchivo, idCarpeta);
 }
 
